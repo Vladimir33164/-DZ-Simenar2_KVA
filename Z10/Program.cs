@@ -10,4 +10,8 @@ Console.Write("Enter a three-digit number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 string snumber = Convert.ToString(number);
 Console.WriteLine("The second digit of this number -> " + snumber[1]);
-       
+
+                              //Numeric variant (via string)
+
+string number = Console.ReadLine();
+Console.WriteLine(number[1]);
