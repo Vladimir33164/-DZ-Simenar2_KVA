@@ -11,10 +11,37 @@ int number = Convert.ToInt32(Console.ReadLine());
 string snumber = Convert.ToString(number);
 Console.WriteLine("The second digit of this number -> " + snumber[1]);
 
-                              //Numeric variant (via string)
+                              //Numeric variant (via void)
 
-string number = Console.ReadLine();
-Console.WriteLine(number[1]);
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int N;
+
+            while (true)
+            {
+                Console.WriteLine("Enter a three-digit integer N (or -1 to terminate the program): ");
+
+                N = int.Parse(Console.ReadLine().ToString());// по условию задачи на вход поступает именно трехзначное число,
+                                                             // значит какие-либо последующие проверки не требуются.
+                if (N == -1)
+                    break;
+
+                N /= 10;
+
+                Console.WriteLine(N % 10);
+            }
+
+        }
+    }
+}
+
 
                               //Numeric variant (via while)
 
